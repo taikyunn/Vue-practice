@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>こんにちは{{name}}さん</h1>
+      <p>所持品</p>
+      <li v-for="item in monster">
+        {{item.name}}
+      </li>
+    </div>
+    <div id="text">
+      <p v-text="text"></p>
+      <div>ピカチュウ</div>
+    </div>
+    <div id="show">
+      <div v-show="foo">カメックス</div>
+      <div v-show="bar">ラプラス</div>
+    </div>
+    <div id="if">
+      <div v-if="foo">リザードン</div>
+      <div v-if="bar">バシャーモ</div>
+    </div>
+    <div id="on">
+      <button v-on:click="counter += 1">Add</button>
+      <p>このボタンが{{counter}}回クリックされました。</p>
+    </div>
+    <!-- 算出プロパティ -->
+    <div id="example">
+      <p>Original message:"{{ message }}"</p>
+      <p>Computed reversed message:"{{ reversedMessage }}"</p>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
